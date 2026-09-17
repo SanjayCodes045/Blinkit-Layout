@@ -1,23 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
-    <nav>
-        <div class="logo">
-            <h1>blink<span>it</span></h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blinkit Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark" aria-label="Blinkit logo">B</div>
+          <div class="brand-copy">
+            <h2>Blinkit</h2>
+            <p>Delivery in 10 minutes</p>
+          </div>
         </div>
-        <h2>Delivery in 13 Minuts</h2>
-         
-        <div class="search-box">
-            
-        </div>
-    </nav>
 
-</body>
+        <div class="location-block">
+          <span class="label">Delivery in</span>
+          <strong>India, Bareilly</strong>
+        </div>
+
+        <label class="searchbar" aria-label="Search groceries">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M10.5 3a7.5 7.5 0 015.9 12.8l4.2 4.2 1.4-1.4-4.2-4.2A7.5 7.5 0 1110.5 3zm0 2a5.5 5.5 0 104.1 9.4A5.5 5.5 0 0010.5 5z"
+            />
+          </svg>
+          <input type="search" placeholder="Search for atta, rice, dal..." />
+        </label>
+
+        <div class="actions">
+          <button class="login-btn">Login</button>
+          <button class="cart-btn">
+            <span>My Cart</span>
+            <strong>₹ 350</strong>
+          </button>
+        </div>
+        <div class="login-modal" id="loginModal">
+          <div class="login-box">
+            <span class="close-btn" id="closeBtn"><i class="fa-solid fa-circle-xmark"></i></span>
+
+            <h2>Login</h2>
+            <p>Enter your phone number to continue</p>
+
+            <input type="tel" placeholder="Enter mobile number" />
+
+            <button class="continue-btn">Continue</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <section class="hero-card">
+          <div class="hero-copy">
+            <span class="eyebrow">Fresh deals • today only</span>
+            <h1>Groceries delivered in 10 minutes.</h1>
+            <p>
+              Bring home Farm-fresh produce, pantry staples, and fast-moving
+              essentials from the stores you trust most.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn">Shop now</button>
+              <button class="secondary-btn">View offers</button>
+            </div>
+          </div>
+          <div
+            class="hero-visual"
+            aria-label="Fresh grocery basket illustration"
+          >
+            <div class="basket">
+              <div class="basket-inner">
+                <span class="fruit apple"></span>
+                <span class="fruit orange"></span>
+                <span class="fruit lemon"></span>
+                <span class="leaf leaf-1"></span>
+                <span class="leaf leaf-2"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="quick-features">
+          <div class="feature-item">
+            <span class="icon green">✓</span>
+            <div>
+              <strong>Freshly picked</strong>
+              <small>Farm to home</small>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="icon yellow">⚡</span>
+            <div>
+              <strong>Fast delivery</strong>
+              <small>In 10 minutes</small>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="icon red">★</span>
+            <div>
+              <strong>Top rated</strong>
+              <small>4.8 customer score</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="categories-section">
+          <div class="section-heading">
+            <h3>Shop by category</h3>
+            <a href="#">See all</a>
+          </div>
+          <div class="category-grid">
+            <article class="category-card veg">
+              <span>Vegetables</span>
+            </article>
+            <article class="category-card fruits">
+              <span>Fruits</span>
+            </article>
+            <article class="category-card dairy">
+              <span>Dairy</span>
+            </article>
+            <article class="category-card bakery">
+              <span>Bakery</span>
+            </article>
+            <article class="category-card snacks">
+              <span>Snacks</span>
+            </article>
+            <article class="category-card pantry">
+              <span>Pantry</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="offer-strip">
+          <div class="offer-card offer-one">
+            <span class="badge">Weekend sale</span>
+            <h4>Save up to 30%</h4>
+            <p>On household essentials</p>
+          </div>
+          <div class="offer-card offer-two">
+            <span class="badge">New arrivals</span>
+            <h4>Organic goodness</h4>
+            <p>Best bags of veggies</p>
+          </div>
+        </section>
+
+        <section class="products-section">
+          <div class="section-heading">
+            <h3>Best sellers</h3>
+            <a href="#">View more</a>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image image-one"></div>
+              <span class="tag">25% off</span>
+              <h4>Fresh Mango</h4>
+              <p>1 kg</p>
+              <div class="product-bottom">
+                <div>
+                  <strong>₹ 119</strong>
+                  <small>₹ 159</small>
+                </div>
+                <button>Add</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image image-two"></div>
+              <span class="tag">Best value</span>
+              <h4>Tomato Basket</h4>
+              <p>500 g</p>
+              <div class="product-bottom">
+                <div>
+                  <strong>₹ 69</strong>
+                  <small>₹ 95</small>
+                </div>
+                <button>Add</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image image-three"></div>
+              <span class="tag">Popular</span>
+              <h4>Avocado</h4>
+              <p>2 pieces</p>
+              <div class="product-bottom">
+                <div>
+                  <strong>₹ 149</strong>
+                  <small>₹ 199</small>
+                </div>
+                <button>Add</button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image image-four"></div>
+              <span class="tag">Fresh</span>
+              <h4>Banana Bunch</h4>
+              <p>1 bunch</p>
+              <div class="product-bottom">
+                <div>
+                  <strong>₹ 89</strong>
+                  <small>₹ 129</small>
+                </div>
+                <button>Add</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
